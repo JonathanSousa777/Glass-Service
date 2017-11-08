@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets" >
+
+    <h:head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Prestação de serviços" />
+        <meta name="author" content="Jonathan Silva Sousa" />
+
+        <link rel="shortcut icon" href="resources/images/glass_icone.ico" />
+        <title><ui:insert name="titulo">Glass Service</ui:insert></title>
+
+        <!-- Bootstrap Core CSS -->
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <!-- CSS do Template -->
+        <h:outputStylesheet library="css" name="startmin.css" />
+    </h:head>
+    <h:body>
+
+        <div id="wrapper">
+
+            <!-- MENU DE NAVEGAÇÃO -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Glass Service</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>	
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Top Navigation: Right Menu -->
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> Jonathan Sousa <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li class="icon"><a href="#"><i class="fa fa-user fa-fw"></i> Perfil</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Sidebar -->
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <span>MENU DE NAVEGAÇÃO</span>
+                            </li>
+                            <li class="icon">
+                                <a href="#" ><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li class="icon">
+                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">Second Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="#">Third Level Item</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--CONTEÚDO-->
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header"><ui:insert name="nomePagina">Glass Service</ui:insert></h1>
+                            <ui:define name="conteudo"></ui:define>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <h:outputScript library="js" name="jquery.min.js" />
+
+        <!-- Bootstrap Core JavaScript -->
+        <h:outputScript library="js" name="bootstrap.min.js" />
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <h:outputScript library="js" name="metisMenu.min.js" />
+
+        <!-- JavaScript  Template-->
+        <h:outputScript library="js" name="startmin.js" />
+    </h:body>
+</html>
+
